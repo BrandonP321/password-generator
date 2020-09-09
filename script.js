@@ -1,6 +1,17 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+function shuffleArr(password) {
+  passwordArr = password.split('');
+  for (var i = passwordArr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * i)
+    const temp = passwordArr[i]
+    passwordArr[i] = passwordArr[j]
+    passwordArr[j] = temp
+  }
+  password = passwordArr.join('')
+  return password
+}
 
 function generateCharacters(length, criteria) {
   var alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -27,6 +38,7 @@ function generateCharacters(length, criteria) {
       password += character
     }
   }
+
   return password
 }
 
@@ -68,6 +80,7 @@ function generatePassword() {
       charsLeft -= charsPerTask
     }
   }
+  password = shuffleArr(password)
   return password
 }
 
