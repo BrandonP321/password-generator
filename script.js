@@ -84,14 +84,21 @@ function generatePassword() {
   return password
 }
 
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  
   passwordText.value = password;
-
+  
 }
+function copyPassword() {
+  var textToCopy = document.getElementById('password')
+  textToCopy.select()
+  document.execCommand("copy")
+  alert("Password copied to clipboard")
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
