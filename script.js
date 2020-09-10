@@ -55,8 +55,8 @@ function generatePassword() {
 
   // keep asking user for input until it is a number between 8 and 128 inclusive
   do {
-    length = prompt("How many characters long should your password be? (must be between 8 and 128)")
-  } while ((length < 8 || length > 128) && typeof(parseInt(length)) != '')
+    length = prompt("How many characters long should your password be? (must be between 8 and 128)");
+  } while ((length < 8 || length > 128) || isNaN(length))
   length = parseInt(length)
 
   // confirm which criteria should be used when creating the password
