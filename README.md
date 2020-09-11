@@ -6,5 +6,5 @@ This is a rather simple website who's purpose is to take in user input on passwo
 ![Password Generator with prompt](/Assets/screen2.png)
 
 ## Shuffle Algorithm
-In order to shuffle the password characters after generating the password, I had to implement the Fisher-Yates algorithm.  Below is an image showing how to algorithm sorts the string.
+In order to shuffle the password characters after generating the password, I had to implement the Fisher-Yates algorithm.  Below is an image showing how the algorithm shuffles the string.
 ![Shuffle algorithm diagram](/Assets/shuffle.png)
